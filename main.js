@@ -55,7 +55,7 @@ const person = [
       gender: 'Female'
     }
   ]
-  
+
 // **** Vic Part ****
 // do...while loop to count from 1 to 1000
 let i = 1;
@@ -82,9 +82,9 @@ getEntry()
 // *** Elias part ***
 
 // *** Jaziel part ***
-var male = person.filter(type => type.gender === 'Male');
+let male = person.filter(type => type.gender === 'Male');
  
-var female = person.filter(type => type.gender === 'Female');
+let female = person.filter(type => type.gender === 'Female');
  
 const old = person.filter(person => {
 if (person.year >= 1900 && person.year <= 1989) {
@@ -93,8 +93,8 @@ return true;
 });
 console.log (old)
 
-let data = person.map(function(element){
-    return ${element.firstName} ${element.lastName} ${element.birthDate} ${element.year} ${element.month} ${element.gender};
+const data = person.map(function(element){
+    return `${element.firstName} ${element.lastName} ${element.birthDate} ${element.year} ${element.month} ${element.gender}`;
     })
     
     console.log(data);
