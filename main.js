@@ -98,3 +98,34 @@ const data = person.map(function(element){
     })
     
     console.log(data);
+
+
+    // .find()
+function findFunction(array, callback) {
+    for(let i = 0 ; i < array.length; i++){
+        let result = callback(array[i], i, array)
+        console.log(`my array has ${array} `, result)
+        if(result) {
+            return array;
+        } 
+    }
+}
+findFunction();
+//findFunction([2,5,8,3,1,4], element => element > 2);
+
+// .findIndex
+function findIndexFunction(array, callback) {
+   
+    let index = 0;
+    for(let element of array){
+        if(callback(element)){
+          console.log(index);
+          return index;
+      }
+        index++
+    }
+     console.log('undifined')
+     return undefined;
+}
+findIndexFunction();
+//findIndexFunction([2,5,8,3,1,4], element => element > 4)
